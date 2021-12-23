@@ -1,5 +1,5 @@
 // Config
-global_ttrssUrl = "/";
+global_ttrssUrl = "";
 
 // Preferences
 pref_Feed = '-4'; // Default: all items
