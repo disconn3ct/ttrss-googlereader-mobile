@@ -1,5 +1,5 @@
 // Config
-global_ttrssUrl = "/ttrss";
+global_ttrssUrl = "/";
 
 // Preferences
 pref_Feed = '-4'; // Default: all items
@@ -9,4 +9,4 @@ pref_OrderBy = 'feed_dates'; // feed_dates: Sort by newest; date_reverse: Sort b
 pref_FeedSort = '0'; // Default: Do not sort feeds
 pref_StartInCat = '0'; // Default: Start showing feeds
 //added so user can change feed limit easily.
-pref_Feed_limit = 25; // Default: Load 25 Items...
+pref_Feed_limit = 50; // Default: Load 25 Items...

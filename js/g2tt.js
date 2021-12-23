@@ -55,7 +55,7 @@ $(document).ready(function () {
         var data = {
             'op': 'login',
             'user': values['Username'],
-            'password': values['Passwd'],
+            // 'password': values['Passwd'],
         };
 
         $inputs.prop("disabled", true);
