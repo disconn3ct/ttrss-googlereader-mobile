@@ -208,25 +208,6 @@ $(document).ready(function () {
 
     });
 
-    // Mark all as read
-    $('#show-more-row, #menu-mark-read').unbind('click').click(function () {
-        $('body').removeClass('loaded').addClass('loading');
-        $('.load-more-message').html('Marking as read...');
-        //remove those that need to be kept unread
-        keepUnread.removeFromArray(global_ids);
-        var data = new Object();
-        data.op = "updateArticle";
-        data.article_ids = global_ids.join(',');
-        data.mode = 0;
-        data.field = 2;
-        var request = apiCall(data);
-
-        request.done(function (response) {
-            $('#entries').empty();
-            getHeadlines();
-        });
-    });
-
     // Logout
     $('#menu-logout').unbind('click').click(function () {
         var data = new Object();
@@ -650,7 +631,6 @@ function getHeadlines(since) {
 
         // Done loading
         $('body').removeClass('loading').addClass('loaded');
-        $('.load-more-message').html('Mark these items as read');
         $('.entries-count').html('Showing ' + $('.entry-row').length + ' items');
         keepUnread.clean(global_ids);
     });
